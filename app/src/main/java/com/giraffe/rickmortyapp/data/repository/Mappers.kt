@@ -1,22 +1,36 @@
 package com.giraffe.rickmortyapp.data.repository
 
-import com.giraffe.CharacterInfoQuery
+import android.graphics.Bitmap
 import com.giraffe.CharactersQuery
-import com.giraffe.rickmortyapp.domain.entities.CharacterEntity
-import com.giraffe.rickmortyapp.domain.entities.CharacterInfoEntity
+import com.giraffe.rickmortyapp.data.datasources.local.models.CharacterModel
+import com.giraffe.rickmortyapp.domain.entities.DetailedCharacterEntity
+import com.giraffe.rickmortyapp.domain.entities.SimpleCharacterEntity
 
-fun CharactersQuery.Result.toEntity() = CharacterEntity(
-    id = id,
-    name = name,
-    image = image
+
+fun CharactersQuery.Result.toCharacterModel(image: Bitmap) = CharacterModel(
+    id = id?:"",
+    name = name?:"",
+    image = image,
+    type = type?:"",
+    gender = gender?:"",
+    status = status?:"",
+    location = location?.name?:"",
+    species = species?:""
 )
 
-fun CharacterInfoQuery.Character.toEntity() = CharacterInfoEntity(
+fun CharacterModel.toSimpleCharacterEntity() = SimpleCharacterEntity(
+    id = id,
+    name = name,
+    image = image,
+)
+
+fun CharacterModel.toDetailedCharacterEntity() = DetailedCharacterEntity(
+    id = id,
     name = name,
     image = image,
     type = type,
     gender = gender,
     status = status,
-    location = location?.name,
+    location = location,
     species = species
 )

@@ -1,8 +1,8 @@
 package com.giraffe.rickmortyapp.presentation.profile
 
-import com.giraffe.rickmortyapp.domain.entities.CharacterInfoEntity
+import com.giraffe.rickmortyapp.domain.entities.DetailedCharacterEntity
 
 data class ProfileState(
     val isLoading: Boolean = false,
-    val characterInfoEntity: CharacterInfoEntity? = null
+    val detailedCharacterEntity: DetailedCharacterEntity? = null
 )

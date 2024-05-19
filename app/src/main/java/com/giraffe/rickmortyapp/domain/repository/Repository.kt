@@ -1,9 +1,9 @@
 package com.giraffe.rickmortyapp.domain.repository
 
-import com.giraffe.rickmortyapp.domain.entities.CharacterEntity
-import com.giraffe.rickmortyapp.domain.entities.CharacterInfoEntity
+import com.giraffe.rickmortyapp.domain.entities.DetailedCharacterEntity
+import com.giraffe.rickmortyapp.domain.entities.SimpleCharacterEntity
 
 interface Repository {
-    suspend fun getCharacters(): List<CharacterEntity?>
-    suspend fun getCharacterInfo(id: String): CharacterInfoEntity?
+    suspend fun getSimpleCharacters(): List<SimpleCharacterEntity>
+    suspend fun getDetailedCharacter(id: String): DetailedCharacterEntity
 }

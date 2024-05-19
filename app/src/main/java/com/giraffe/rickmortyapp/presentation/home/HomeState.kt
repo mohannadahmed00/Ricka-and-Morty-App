@@ -1,8 +1,8 @@
 package com.giraffe.rickmortyapp.presentation.home
 
-import com.giraffe.rickmortyapp.domain.entities.CharacterEntity
+import com.giraffe.rickmortyapp.domain.entities.SimpleCharacterEntity
 
 data class HomeState(
-    val isLoading: Boolean = false,
-    val characters: List<CharacterEntity> = emptyList()
+    val isLoading: Boolean = true,
+    val characters: List<SimpleCharacterEntity> = emptyList()
 )

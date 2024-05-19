@@ -2,8 +2,15 @@ query Characters{
     characters{
         results {
             id
-            name
             image
+            name
+            gender
+            status
+            species
+            type
+            location {
+                name
+            }
         }
     }
 }

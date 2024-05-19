@@ -84,7 +84,12 @@ dependencies {
     implementation(libs.androidx.viewModelLifecycle)
     implementation(libs.apollo.runtime)
     implementation(libs.coil.compose)
+    implementation(libs.coil)
     implementation(libs.navigation.compose)
     implementation(libs.kotlinx.serialization.json)
     implementation(libs.animation)
+    ksp(libs.androidx.room.compiler)
+    implementation(libs.androidx.room.ktx)
+    implementation(libs.androidx.room.runtime)
+    implementation(libs.androidx.datastore)
 }
