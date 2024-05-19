@@ -1,0 +1,13 @@
+query CharacterInfo($characterId: ID!){
+    character(id: $characterId){
+        image
+        name
+        gender
+        status
+        species
+        type
+        location {
+            name
+        }
+    }
+}
